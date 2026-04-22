@@ -1,52 +1,52 @@
-# 💰 Finanzas Web
+# Finanzas Web
 
-App de gestión financiera familiar hecha en HTML puro — sin frameworks, sin dependencias, sin servidor. Solo descarga el archivo y ábrelo en tu navegador.
+A family financial management application built with pure HTML — no frameworks, no dependencies, no server required. Simply download the file and open it in your browser.
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- **Inicio** — resumen general del balance, ingresos y gastos de la semana, y barras de progreso por categoría (Gastos, Préstamos, Créditos, Kash)
-- **Registrar** — registra movimientos de tipo Ingreso, Gasto Personal, Crédito bancario o Kash; también permite transferencias entre cuentas (Efectivo / Bancos)
-- **Movimientos** — historial filtrable por tipo y semana
-- **Tiendas** — seguimiento de gastos por tienda o comercio
-- **Préstamos** — registro y control de préstamos con cuotas
-- **Reporte** — vista semanal/mensual/anual con desglose de ingresos, gastos del negocio, gastos de casa y resumen final
+- **Dashboard** — General balance summary, weekly income and expenses, and progress bars by category (Expenses, Loans, Credits, Kash)
+- **Register** — Record transactions as Income, Personal Expense, Bank Credit, or Kash; also supports transfers between accounts (Cash / Banking)
+- **Movements** — Filterable transaction history by type and week
+- **Stores** — Track expenses by store or merchant
+- **Loans** — Record and manage loans with payment schedules
+- **Reports** — Weekly/monthly/yearly views with income breakdown, business expenses, household expenses, and summary totals
 
-## 🚀 Uso rápido
+## 🚀 Quick Start
 
-1. Descarga el archivo `Finanzas.html`
-2. Ábrelo en cualquier navegador moderno
-3. Empieza a registrar tus movimientos
+1. Download the `Finanzas.html` file
+2. Open it in any modern browser
+3. Start recording your transactions
 
-Los datos se guardan automáticamente en el `localStorage` de tu navegador. No se envía nada a ningún servidor.
+Data is automatically saved to your browser's `localStorage`. Nothing is sent to any server.
 
-## 🔧 ¿Cómo conectarlo a una base de datos?
+## 🔧 Connecting to a Database
 
-Actualmente la app usa `localStorage` para persistir los datos. Si quieres conectarla a una BD real, reemplaza las siguientes funciones en el script:
+Currently, the application uses `localStorage` for data persistence. To connect it to a real database, replace the following functions in the script:
 
-| Función actual | Qué hace | Qué reemplazar |
+| Current Function | Purpose | Replacement |
 |---|---|---|
-| `loadMovs()` | Carga movimientos desde localStorage | Fetch a tu API GET /movimientos |
-| `saveMovs()` | Guarda movimientos en localStorage | Fetch a tu API POST /movimientos |
-| `loadTraspasos()` | Carga transferencias | Fetch a tu API GET /traspasos |
-| `saveTraspasos()` | Guarda transferencias | Fetch a tu API POST /traspasos |
-| `loadPrestamos()` | Carga préstamos | Fetch a tu API GET /prestamos |
-| `savePrestamos()` | Guarda préstamos | Fetch a tu API POST /prestamos |
+| `loadMovs()` | Loads transactions from localStorage | Fetch to your API GET /movements |
+| `saveMovs()` | Saves transactions to localStorage | Fetch to your API POST /movements |
+| `loadTraspasos()` | Loads transfers | Fetch to your API GET /transfers |
+| `saveTraspasos()` | Saves transfers | Fetch to your API POST /transfers |
+| `loadPrestamos()` | Loads loans | Fetch to your API GET /loans |
+| `savePrestamos()` | Saves loans | Fetch to your API POST /loans |
 
-Ejemplo de cómo quedaría `loadMovs()` con una API REST:
+Example of how `loadMovs()` would look with a REST API:
 
 ```javascript
 async function loadMovs() {
-  const res = await fetch('https://tu-api.com/movimientos');
+  const res = await fetch('https://your-api.com/movements');
   movs = await res.json();
 }
 ```
 
-## 🛠️ Tech stack
+## 🛠️ Technology Stack
 
 - HTML5 + CSS3 + JavaScript vanilla
-- Fuentes: [Sora](https://fonts.google.com/specimen/Sora) + [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) (Google Fonts)
-- Persistencia: `localStorage` (sin BD por defecto)
+- Fonts: [Sora](https://fonts.google.com/specimen/Sora) + [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) (Google Fonts)
+- Persistence: `localStorage` (no database by default)
 
-## 📄 Licencia
+## 📄 License
 
-MIT — úsalo, modifícalo y compártelo libremente.
+MIT — Use, modify, and share freely.
