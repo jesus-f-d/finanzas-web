@@ -2,7 +2,7 @@
 
 A family financial management application built with pure HTML — no frameworks, no dependencies, no server required. Simply download the file and open it in your browser.
 
-## ✨ Features
+##  Features
 
 - **Dashboard** — General balance summary, weekly income and expenses, and progress bars by category (Expenses, Loans, Credits, Kash)
 - **Register** — Record transactions as Income, Personal Expense, Bank Credit, or Kash; also supports transfers between accounts (Cash / Banking)
@@ -11,7 +11,7 @@ A family financial management application built with pure HTML — no frameworks
 - **Loans** — Record and manage loans with payment schedules
 - **Reports** — Weekly/monthly/yearly views with income breakdown, business expenses, household expenses, and summary totals
 
-## 🚀 Quick Start
+##  Quick Start
 
 1. Download the `Finanzas.html` file
 2. Open it in any modern browser
@@ -19,7 +19,7 @@ A family financial management application built with pure HTML — no frameworks
 
 Data is automatically saved to your browser's `localStorage`. Nothing is sent to any server.
 
-## 🔧 Connecting to a Database
+##  Connecting to a Database
 
 Currently, the application uses `localStorage` for data persistence. To connect it to a real database, replace the following functions in the script:
 
@@ -41,7 +41,7 @@ async function loadMovs() {
 }
 ```
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - HTML5 + CSS3 + JavaScript vanilla
 - Fonts: [Sora](https://fonts.google.com/specimen/Sora) + [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) (Google Fonts)
